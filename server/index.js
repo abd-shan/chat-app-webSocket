@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const PORT = 3000;
 const wss = new WebSocket.Server({ port: PORT }, () =>
-  console.log(`🚀 WebSocket server running on ws://localhost:${PORT}`)
+  console.log(` WebSocket server running on ws://localhost:${PORT}`)
 );
 
 const clients = new Map();
@@ -164,7 +164,7 @@ wss.on('connection', (socket) => {
         timestamp: Date.now()
       });
       
-      console.log(`🔌 ${userData.userName} left the chat`);
+      console.log(` ${userData.userName} left the chat`);
     }
   });
 
